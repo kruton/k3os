@@ -1,5 +1,5 @@
 ### BASE ###
-FROM alpine:3.19 as base
+FROM alpine:3.20 as base
 ARG ARCH
 RUN apk --no-cache add \
     bash \
