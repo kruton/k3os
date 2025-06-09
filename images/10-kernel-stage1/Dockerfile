@@ -19,9 +19,9 @@ RUN apt-get --assume-yes update \
 ARG ARCH
 ENV KVERSION=5.15.0-124-generic
 ENV URL=https://github.com/BlueKrypto/k3os-kernel/releases/download/5.15.0-124.134-bluekrypto1
-ENV KERNEL_XZ=${URL}/kernel-generic_${ARCH}.tar.xz
-ENV KERNEL_EXTRA_XZ=${URL}/kernel-extra-generic_${ARCH}.tar.xz
-ENV KERNEL_HEADERS_XZ=${URL}/kernel-headers-generic_${ARCH}.tar.xz
+ENV KERNEL_XZ="${URL}/kernel-generic_${ARCH}.tar.xz"
+ENV KERNEL_EXTRA_XZ="${URL}/kernel-extra-generic_${ARCH}.tar.xz"
+ENV KERNEL_HEADERS_XZ="${URL}/kernel-headers-generic_${ARCH}.tar.xz"
 
 # Download kernel
 RUN mkdir -p /usr/src
