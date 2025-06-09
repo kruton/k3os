@@ -1,14 +1,14 @@
 ARG REPO
 ARG TAG
-FROM ${REPO}/k3os-tar:${TAG} as tar
+FROM ${REPO}/k3os-tar:${TAG} AS tar
 
 ARG REPO
 ARG TAG
-FROM ${REPO}/k3os-iso:${TAG} as iso
+FROM ${REPO}/k3os-iso:${TAG} AS iso
 
 ARG REPO
 ARG TAG
-FROM ${REPO}/k3os-kernel:${TAG} as kernel
+FROM ${REPO}/k3os-kernel:${TAG} AS kernel
 
 ARG REPO
 ARG TAG

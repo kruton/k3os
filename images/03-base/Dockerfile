@@ -1,6 +1,6 @@
 ARG REPO
 ARG TAG
-FROM ${REPO}/k3os-awscli:${TAG} as awscli
+FROM ${REPO}/k3os-awscli:${TAG} AS awscli
 
 ARG REPO
 ARG TAG

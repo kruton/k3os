@@ -1,6 +1,6 @@
 ARG REPO
 ARG TAG
-FROM ${REPO}/k3os-kernel:${TAG} as kernel
+FROM ${REPO}/k3os-kernel:${TAG} AS kernel
 
 ARG REPO
 ARG TAG

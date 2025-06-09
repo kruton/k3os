@@ -1,6 +1,6 @@
 ARG REPO
 ARG TAG
-FROM ${REPO}/k3os-tar:${TAG} as tar
+FROM ${REPO}/k3os-tar:${TAG} AS tar
 
 ARG REPO
 ARG TAG

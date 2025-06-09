@@ -1,10 +1,10 @@
 ARG REPO
 ARG TAG
-FROM ${REPO}/k3os-package:${TAG} as package
+FROM ${REPO}/k3os-package:${TAG} AS package
 
 ARG REPO
 ARG TAG
-FROM ${REPO}/k3os-base:${TAG} as base
+FROM ${REPO}/k3os-base:${TAG} AS base
 ARG VERSION
 ARG ARCH
 RUN apk add xorriso grub grub-efi mtools libvirt qemu-img

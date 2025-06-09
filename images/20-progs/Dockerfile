@@ -1,18 +1,18 @@
 ARG REPO
 ARG TAG
 ARG VERSION
-FROM ${REPO}/k3os-gobuild:${TAG} as gobuild
+FROM ${REPO}/k3os-gobuild:${TAG} AS gobuild
 
 ENV LINUXKIT v1.2.0
 
-FROM gobuild as linuxkit
+FROM gobuild AS linuxkit
 ENV GO111MODULE off
 RUN git clone https://github.com/linuxkit/linuxkit.git $GOPATH/src/github.com/linuxkit/linuxkit
 WORKDIR $GOPATH/src/github.com/linuxkit/linuxkit/pkg/metadata
 RUN git checkout -b current $LINUXKIT
 RUN gobuild -o /output/metadata
 
-FROM gobuild as k3os
+FROM gobuild AS k3os
 ARG VERSION
 COPY go.mod $GOPATH/src/github.com/BlueKrypto/k3os/
 COPY go.sum $GOPATH/src/github.com/BlueKrypto/k3os/

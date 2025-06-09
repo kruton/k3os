@@ -1,10 +1,10 @@
 ARG REPO
 ARG TAG
-FROM ${REPO}/k3os-rootfs:${TAG} as rootfs
+FROM ${REPO}/k3os-rootfs:${TAG} AS rootfs
 
 ARG REPO
 ARG TAG
-FROM ${REPO}/k3os-progs:${TAG} as progs
+FROM ${REPO}/k3os-progs:${TAG} AS progs
 
 ARG REPO
 ARG TAG

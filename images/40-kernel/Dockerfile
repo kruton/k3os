@@ -1,8 +1,8 @@
 ARG REPO
 ARG TAG
-FROM ${REPO}/k3os-bin:${TAG} as bin
+FROM ${REPO}/k3os-bin:${TAG} AS bin
 
-FROM ${REPO}/k3os-kernel-stage1:${TAG} as kernel
+FROM ${REPO}/k3os-kernel-stage1:${TAG} AS kernel
 
 FROM ${REPO}/k3os-base:${TAG}
 ARG TAG
